@@ -1,0 +1,9 @@
+body {
+  font-family: var(--font-default);
+  background-color: yellow;
+}
+
+h1{
+  font-family: var(--font-primary);
+  color:red;
+}
