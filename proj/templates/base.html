@@ -1,0 +1,46 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static  'style' %}">
+</head>
+<body>
+  <h2>Welcome To Home page</h2>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="{% url 'home' %}">Home</a></li>
+          <form action="www.google .com">
+                    <h1>REGISTER NOW</h1>
+                    <label for="fname">Name:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="pwd">Password:</label>
+                    <input type="password" id="pwd" name="pwd"><br><br>
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="gender">Gender:</label>
+                    <input type="radio" id="gender" name="gender" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="gender" name="gender" value="Female">
+                    <label for="female">Female</label><br><br>
+                    <label for="contacts">Contacts:</label>
+                    <input type="text" id="Contacts" name="contacts"><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Sign up <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+
+              <li><a  href="{% url 'employeesignup' %}">employeesignup</a></li>
+                <li><a  href="{% url 'ceosignup' %}">ceosignup</a></li>
+            </ul>
+          </li>
+         <li><a href="{% url 'user_login' %}">login</a></li>
+      <li><a href="{% url 'user_logout' %}">logout</a></li>
+    </ul>
+  </div>
+</nav>
+{% block body_block %}
+{% endblock %}
+</body>
+</html>
